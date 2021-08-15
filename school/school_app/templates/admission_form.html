@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MLRP School</title>
+    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/rango-jquery.js" %}"></script>
+
+
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <link href="{% static  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- Favicons -->
+    <link href={% static "img/favicon.png" %} rel="icon">
+    <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Libraries CSS Files -->
+    <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+    <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href={% static "css/style.css" %} rel="stylesheet">
+
+    <!-- Include jQuery -->
+    <script src="{% static 'http://code.jquery.com/jquery-1.8.2.min.js' %}"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="{% static 'http://vast-eng.github.io/jquery-popup-overlay/jquery.popupoverlay.js' %}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      $("#btnclick").click(function(){
+        $("#divpopup").dialog({
+          title: "my jquery popup",
+          width: 430,
+          height: 200,
+          modal: true,
+          buttons: {
+            Close:function(){
+              $(this).dialog('close');
+            }
+          }
+        });
+      });
+    })
+  </script>
+
+</head>
+<body id="home">
+
+<nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+    <div class="container-fluid px-5">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'infrastructure' %}" class="nav-link">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'admission' %}" class="nav-link">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'teachers' %}" class="nav-link">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'tc_certi' %}" class="nav-link">TC</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<form  method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ aform.non_field_errors }}
+    <div class="container py-5">
+        <h3 class="student_detail">Student Detail</h3><br>
+        <div class="row py-3">
+            <div class="col-lg-6 col-sm-12">
+                <div class="fieldWrapper">
+                    {{ aform.name.errors }}
+                    <label for="{{ aform.name.id_for_label }}">Name*: </label>
+                    {{ aform.name }}
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="fieldWrapper">
+                    {{ aform.dob.errors }}
+                    <label for="{{ aform.dob.id_for_label }}">Date of birth*: </label>
+                    {{ aform.dob }}
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.gender.errors }}
+                            <label for="{{ aform.gender.id_for_label }}">Gender*: </label>
+                            {{ aform.gender }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.religion.errors }}
+                            <label for="{{ aform.religion.id_for_label }}">Religion*: </label>
+                            {{ aform.religion }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.blood.errors }}
+                            <label for="{{ aform.blood.id_for_label }}">Blood Type*: </label>
+                            {{ aform.blood }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.caste.errors }}
+                            <label for="{{ aform.caste.id_for_label }}">Caste*: </label>
+                            {{ aform.caste }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.student_image.errors }}
+                            <label for="{{ aform.student_image.id_for_label }}"> Student Image*: </label>
+                            {{ aform.student_image }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+
+                <h3 class="student_detail">Father's Detail</h3>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.f_name.errors }}
+                            <label for="{{ aform.f_name.id_for_label }}">Name*: </label>
+                            {{ aform.f_name }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.f_phone.errors }}
+                            <label for="{{ aform.f_phone.id_for_label }}">Phone Number*: </label>
+                            {{ aform.f_phone }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.f_profession.errors }}
+                            <label for="{{ aform.f_profession.id_for_label }}">Profession*: </label>
+                            {{ aform.f_profession }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.f_email.errors }}
+                            <label for="{{ aform.f_email.id_for_label }}">Email: </label>
+                            {{ aform.f_email }}
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3 class="student_detail">Mother's Detail</h3>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.m_name.errors }}
+                            <label for="{{ aform.m_name.id_for_label }}">Name*: </label>
+                            {{ aform.m_name }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.m_phone.errors }}
+                            <label for="{{ aform.m_phone.id_for_label }}">Phone Number*: </label>
+                            {{ aform.m_phone }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.m_profession.errors }}
+                            <label for="{{ aform.m_profession.id_for_label }}">Profession*: </label>
+                            {{ aform.m_profession }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.m_email.errors }}
+                            <label for="{{ aform.m_email.id_for_label }}">Email: </label>
+                            {{ aform.m_email }}
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <h3 class="student_detail">Guardian Detail</h3>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_name.errors }}
+                            <label for="{{ aform.g_name.id_for_label }}">Name*: </label>
+                            {{ aform.g_name }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_phone1.errors }}
+                            <label for="{{ aform.g_phone1.id_for_label }}">Phone Number*: </label>
+                            {{ aform.g_phone1 }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_phone2.errors }}
+                            <label for="{{ aform.g_phone2.id_for_label }}">Phone Number*: </label>
+                            {{ aform.g_phone2 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_profession.errors }}
+                            <label for="{{ aform.g_profession.id_for_label }}">Professsion*: </label>
+                            {{ aform.g_profession }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_email.errors }}
+                            <label for="{{ aform.g_email.id_for_label }}">Email: </label>
+                            {{ aform.g_email }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_rel_with_guardion.errors }}
+                            <label for="{{ aform.g_rel_with_guardion.id_for_label }}">Relation with Guardian*: </label>
+                            {{ aform.g_rel_with_guardion }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_religion.errors }}
+                            <label for="{{ aform.g_religion.id_for_label }}">Religion*: </label>
+                            {{ aform.g_religion }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_caddress.errors }}
+                            <label for="{{ aform.g_caddress.id_for_label }}">Current Address*: </label>
+                            <br>
+                            {{ aform.g_caddress }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.g_paddress.errors }}
+                            <label for="{{ aform.g_paddress.id_for_label }}">Permanent Address*: </label>
+                            <br>
+                            {{ aform.g_paddress }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="student_detail">Contact Details</h3>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.c_phone.errors }}
+                            <label for="{{ aform.c_phone.id_for_label }}">Contact Phone Number*: </label>
+                            {{ aform.c_phone }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.c_email.errors }}
+                            <label for="{{ aform.c_email.id_for_label }}">Contact Email: </label>
+                            {{ aform.c_email }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.c_address.errors }}
+                            <label for="{{ aform.c_address.id_for_label }}">Contact address*: </label> <br>
+                            {{ aform.c_address }}
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="student_detail">Academic Details</h3>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.acad_class.errors }}
+                            <label for="{{ aform.acad_class.id_for_label }}">Academic Class*: </label>
+                            {{ aform.acad_class }}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.acad_prev_class.errors }}
+                            <label for="{{ aform.acad_prev_class.id_for_label }}">Previous Class*: </label>
+                            {{ aform.acad_prev_class }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="fieldWrapper">
+                            {{ aform.aad_prev_school.errors }}
+                            <label for="{{ aform.aad_prev_school.id_for_label }}">Previous School*: </label>
+                            {{ aform.aad_prev_school }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn" value="Submit" style="background-color: #478f60;color:white; border-radius: 15px 50px;  " ></input>
+        </div>
+    </div>
+
+</form>
+
+
+
+<!----------- Footer ------------>
+<footer id="footer" class="ct-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 ">
+                <h2 class="ct-footer-list-header"><span style="color:white">Quick Links</span></h2>
+                <ul>
+                    <p>
+                        <a href="{% url 'index' %}"  ><span style="color:white">HOME</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'about' %}"><span style="color:white">About Us</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'admission' %}"><span style="color:white">Admission</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'contact' %}"><span style="color:white">Contact Us</span></a>
+                    </p>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+
+            </div>
+            <div class="col-lg-4">
+                <h2 class="ct-footer-list-header"><span style="color:white">CONTACT US</span></h2>
+                <ul>
+                    <p>
+                    <address>
+                        <span>LALITPUR ROAD<br></span>TARGUWAN<br>
+                        TALBEHAT, LALITPUR, 284126<br>
+                        <span>Phone: <a href="tel:9369381033">(+91) 9369381033 ,</a></span><br>
+                        <span><a href="tel:9369381033">(+91) 8667391462</a></span>
+                    </address>
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+
+</footer>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

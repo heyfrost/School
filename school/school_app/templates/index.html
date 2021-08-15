@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MLRP Public Schools</title>
+    <link rel = "shortcut icon" href ="{% static 'img/logo.jpg' %}" type="image/gif">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/rango-jquery.js" %}"></script>
+
+
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <link href="{% static  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- Favicons -->
+    <link href={% static "img/favicon.png" %} rel="icon">
+    <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Libraries CSS Files -->
+    <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+    <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href={% static "css/style.css" %} rel="stylesheet">
+
+    <!-- Include jQuery -->
+    <script src="{% static 'http://code.jquery.com/jquery-1.8.2.min.js' %}"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="{% static 'http://vast-eng.github.io/jquery-popup-overlay/jquery.popupoverlay.js' %}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      $("#btnclick").click(function(){
+        $("#divpopup").dialog({
+          title: "my jquery popup",
+          width: 430,
+          height: 200,
+          modal: true,
+          buttons: {
+            Close:function(){
+              $(this).dialog('close');
+            }
+          }
+        });
+      });
+    })
+  </script>
+
+</head>
+<body id="home1">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 py-2 px-3">
+            <div>
+                <a href="{% url 'index' %}" class="navbar-brand">
+                    <img src="{% static 'img/logo.jpg' %}" width="50%" height="50%" alt="" class="topimage">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-9 mar">
+            <div class="container-fluid theadin">
+                <h1 class="topheading text-justify">MLRP Public School</h1>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-expand-md navbar-light py-3 " id="navbar1">
+    <div class="container-fluid px-5">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'infrastructure' %}" class="nav-link">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'admission' %}" class="nav-link">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'teachers' %}" class="nav-link">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'tc_certi' %}" class="nav-link">TC</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="content12">
+    <!--SHOWCASE-->
+    <section>
+        <div class="primary-overlay text-white py-3">
+            <img src="../static/img/schl1.jpg" alt="mlrpschool" class="img-fluid no-repeat" width="100%" height="auto">
+        </div>
+    </section>
+
+    <section id="notice" class="py-5 text-center bg-light">
+        <div class="container">
+            <div class="info-header">
+                <h1 class="" style="color:#3292a6;">
+                    NOTICE
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!--sdfsdfdsf-->
+
+
+
+    <section id="boxes" class="py-3">
+        <div class="container">
+            <div class="row">
+                {% for notice in notices %}
+                <div class="col md-3">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h3 class="" style="color:#3292a6;"><a href="{{ notice.file.url }}" target="_blank">{{ notice.title }}</a></h3>
+                            <p class="text-muted">{{ notice.content }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!--ABOUT-->
+
+    <section id="message" class="py-5 text-center bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-header mb-5">
+                        <h1 class="pb-3" style="color:#3292a6;">
+                            WHY OUR SCHOOL ?
+                        </h1>
+                        <p class="lead pb-3 text-justify">
+                            Best for Least! That is our policy at MLRP Public School, Talbehat.
+                            We strive to provide our students with state of the art education at minimal fees!
+                        </p>
+                    </div>
+
+
+
+
+                    <!--accordian-->
+
+                    <div id="accordion" role="tablist"></div>
+                    <div class="card">
+                        <div class="card-header" id="heading1">
+                            <h5 class="mb-0">
+                                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="fa fa-arrow-circle-down"> </i> FOUNDER'S MESSAGE...
+                                </div>
+                            </h5>
+                        </div>
+
+                        <div id="colllapse1" class="collapse show text-justify">
+                            <div class="card-body ">The term 'education' encompasses more than just knowledge and knowing.
+                                It is a harmonious blend of academia, arts, sports, emotions, attitudes, creativity, nature and life itself!
+                                And in the world we have built today, the one who is adept in all these areas is the one who succeeds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading2">
+                            <h5 class="mb-0">
+                                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="fa fa-arrow-circle-down"> </i> PRINCIPLE'S MESSAGE
+                                </div>
+                            </h5>
+                        </div>
+
+                        <div id="colllapse2" class="collapse show text-justify">
+                            <div class="card-body ">As I walk down the hallways of the school every day, I can hear the chatter of eager minds,
+                                the shouts of excitement from the victorious athletes, the thump of dancer’s feet & the sound of melodious voices harmonizing.
+                                The perpetual energy, movement & enthusiasm permeate the atmosphere at VPS. We are school with a difference.
+                                We value individualism, creativity and innovation and strive to nurture them in our students.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--about-->
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Send us a Message</h3>
+                    <p class="lead">Let us know your response!</p>
+                    <div class="form" >
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for hidden_field in form.hidden_fields %}
+                            {{ hidden_field }}
+                            {% endfor %}
+
+                            {% if form.non_field_errors %}
+                            <div class="alert alert-danger" role="alert">
+                                {% for error in form.non_field_errors %}
+                                {{ error }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            {% for field in form.visible_fields %}
+                            <div class="form-group">
+                                {{ field.label_tag }}
+
+                                {% if form.is_bound %}
+                                {% if field.errors %}
+                                {% render_field field class="form-control is-invalid" %}
+                                {% for error in field.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                {% render_field field class="form-control is-valid" %}
+                                {% endif %}
+                                {% else %}
+                                {% render_field field class="form-control" %}
+                                {% endif %}
+
+                                {% if field.help_text %}
+                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                            <center>
+
+                                <button type="submit" class="ml-auto mr-auto btn btn-danger">Send</button>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 align-self-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Reach Us At </h3>
+                            <h2>Phone : </h2>
+                            <h5 class="text-muted"> 9369381033</h5>
+                            <h5 class="text-muted"> 8667391462</h5>
+                            <h2>Email : </h2>
+                            <h5 class="text-muted">mlrppublicschool@gmail.com</h5>
+                            <div class="d-flex flex-row justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+</div>
+</div>
+</section>
+<!----------- Footer ------------>
+<footer id="footer" class="ct-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 ">
+                <h2 class="ct-footer-list-header"><span style="color:white">Quick Links</span></h2>
+                <ul>
+                    <p>
+                        <a href="{% url 'index' %}"  ><span style="color:white">HOME</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'about' %}"><span style="color:white">About Us</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'admission' %}"><span style="color:white">Admission</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'contact' %}"><span style="color:white">Contact Us</span></a>
+                    </p>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+
+            </div>
+            <div class="col-lg-4">
+                <h2 class="ct-footer-list-header"><span style="color:white">CONTACT US</span></h2>
+                <ul>
+                    <p>
+                    <address>
+                        <span>LALITPUR ROAD<br></span>TARGUWAN<br>
+                        TALBEHAT, LALITPUR, 284126<br>
+                        <span>Phone: <a href="tel:9369381033">(+91) 9369381033 ,</a></span><br>
+                        <span><a href="tel:9369381033">(+91) 8667391462</a></span>
+                    </address>
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+
+</footer>
+
+</div>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar1");
+    var sticky = navbar1.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        navbar1.classList.add("sticky")
+        } else {
+            navbar1.classList.remove("sticky");
+        }
+    }
+</script>
+<script>
+    $('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left'></i>",
+    "<i class='fa fa-caret-right'></i>"
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
+</script>
+</body>
+</html>

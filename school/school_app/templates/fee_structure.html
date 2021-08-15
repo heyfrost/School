@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fee Structure</title>
+    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/rango-jquery.js" %}"></script>
+
+
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <link href="{% static  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- Favicons -->
+    <link href={% static "img/favicon.png" %} rel="icon">
+    <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Libraries CSS Files -->
+    <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+    <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href={% static "css/style.css" %} rel="stylesheet">
+
+    <!-- Include jQuery -->
+    <script src="{% static 'http://code.jquery.com/jquery-1.8.2.min.js' %}"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="{% static 'http://vast-eng.github.io/jquery-popup-overlay/jquery.popupoverlay.js' %}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      $("#btnclick").click(function(){
+        $("#divpopup").dialog({
+          title: "my jquery popup",
+          width: 430,
+          height: 200,
+          modal: true,
+          buttons: {
+            Close:function(){
+              $(this).dialog('close');
+            }
+          }
+        });
+      });
+    })
+  </script>
+    <script>
+        table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+    </script>
+
+</head>
+<body id="home">
+<nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+    <div class="container-fluid px-5">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'infrastructure' %}" class="nav-link">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'admission' %}" class="nav-link">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'teachers' %}" class="nav-link">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'tc_certi' %}" class="nav-link">TC</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-----fee---->
+<div class="container-fluid">
+    <h2 id="adms" class="py-4" style="text-align: center;color: #3;color: #3292a6;border-top: 20px;margin-top: 20px;"><b>Fee Structure</b></h2>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-10">
+                    <h3>Quarterly payable fees:</h3>
+                    <table class="table table-striped tslide" style="overflow-x:auto;">
+                        <thead>
+                        <tr>
+                            <th scope="col">Class</th>
+                            <th scope="col">First Quarter</th>
+                            <th scope="col">Second Quarter</th>
+                            <th scope="col">Third Quarter</th>
+                            <th scope="col">Fourth Quarter</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for fee in fqq %}
+                        <tr>
+                            <th scope="row">{{ fee.clas }}</th>
+                            <td><span><b>&#8377</b>  </span>{{ fee.first_quarter }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.second_quarter }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.third_quarter }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.fourth_quarter }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.total }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-10">
+                    <h3>Fee breakdown:</h3>
+                    <table class="table table-striped tslide" style="overflow-x:auto;">
+                        <thead>
+                        <tr>
+                            <th scope="col">Class</th>
+                            <th scope="col">Admission Fee</th>
+                            <th scope="col">Tution Fee</th>
+                            <th scope="col">Science Lab Fee</th>
+                            <th scope="col">Computer Fee</th>
+                            <th scope="col">Development Fee</th>
+                            <th scope="col">Smart Class Fee</th>
+                            <th scope="col">Exam Fee</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for fee in fees %}
+                        <tr>
+                            <th scope="row">{{ fee.clas }}</th>
+                            <td><span><b>&#8377</b>  </span>{{ fee.add_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.tution_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.science_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.comp_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.dev_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.smart_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.exam_fee }}</td>
+                            <td><span><b>&#8377</b>  </span>{{ fee.total_fee }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <h3 class="pt-5"><b>Note:</b></h3>
+                    <div>
+                        <p>1.	The fee is for whole session and can be paid in 4*  equal installments.</p>
+                        <p>2.	First semester fees include admission fees and exam fees which are to be paid only once a year.</p>
+                        <p>3.	Fee once submitted will not be refunded in any circumstances.</p>
+                        <p>4.	Late fee will be charged* on quarterly* basis after the due date ( Rs. 60/- per quarter ).</p>
+                        <p>5.	Exam fees to be paid only  once a year.</p>
+                        <p>6.	Fee breakdown is given on monthly basis.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 py-5" id="addbar">
+            <div id="bordercolor">
+                <h2 style="color:#3292a6;">
+                    <i class="fa fa-map-marker" style="font-size:40px;color:#3292a6"></i>
+                    <b>Address:</b>
+                </h2>
+                <h5>Targuwan Road </h5>
+                <h5>Talbehat</h5>
+                <h4>Dist: Lalitpur</h4>
+                <h5>PIN: 284126</h5>
+            </div>
+            <div id="bordercolor">
+                <h2 style="color:#3292a6;">
+                    <i class="fa fa-phone" style="font-size:40px;color:#3292a6"></i>
+                    <b>Contact Us:</b>
+                </h2>
+                <h5>(+91) 9369381033</h5>
+                <h5>(+91) 8667391462</h5>
+            </div>
+            <div>
+
+                <h2 style="color:#3292a6;"><i class="fa fa-envelope" style="font-size:40px;color:#3292a6"></i><b>    Email:</b></h2>
+                <h5> mlrppublicschool@gmail.com</h5>
+            </div>
+            <h3 class="pt-5" style="color:#3292a6;">Send us a Message</h3>
+            <p class="lead">Let us know your response!</p>
+            <div class="form" >
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for hidden_field in form.hidden_fields %}
+                    {{ hidden_field }}
+                    {% endfor %}
+
+                    {% if form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                        {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+
+                        {% if form.is_bound %}
+                        {% if field.errors %}
+                        {% render_field field class="form-control is-invalid" %}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% render_field field class="form-control is-valid" %}
+                        {% endif %}
+                        {% else %}
+                        {% render_field field class="form-control" %}
+                        {% endif %}
+
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <center>
+
+                        <button type="submit" class="ml-auto mr-auto btn btn-danger">Send</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------- Footer ------------>
+<footer id="footer" class="ct-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 ">
+                <h2 class="ct-footer-list-header"><span style="color:white">Quick Links</span></h2>
+                <ul>
+                    <p>
+                        <a href="{% url 'index' %}"  ><span style="color:white">HOME</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'about' %}"><span style="color:white">About Us</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'admission' %}"><span style="color:white">Admission</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'contact' %}"><span style="color:white">Contact Us</span></a>
+                    </p>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+
+            </div>
+            <div class="col-lg-4">
+                <h2 class="ct-footer-list-header"><span style="color:white">CONTACT US</span></h2>
+                <ul>
+                    <p>
+                    <address>
+                        <span>LALITPUR ROAD<br></span>TARGUWAN<br>
+                        TALBEHAT, LALITPUR, 284126<br>
+                        <span>Phone: <a href="tel:9369381033">(+91) 9369381033 ,</a></span><br>
+                        <span><a href="tel:9369381033">(+91) 8667391462</a></span>
+                    </address>
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+</footer>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

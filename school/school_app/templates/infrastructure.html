@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infrastructure</title>
+    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/rango-jquery.js" %}"></script>
+
+
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <link href="{% static  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' %}"></script>
+
+
+
+    <!-- Favicons -->
+    <link href={% static "img/favicon.png" %} rel="icon">
+    <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Libraries CSS Files -->
+    <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+    <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href={% static "css/style.css" %} rel="stylesheet">
+
+    <!-- Include jQuery -->
+    <script src="{% static 'http://code.jquery.com/jquery-1.8.2.min.js' %}"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="{% static 'http://vast-eng.github.io/jquery-popup-overlay/jquery.popupoverlay.js' %}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      $("#btnclick").click(function(){
+        $("#divpopup").dialog({
+          title: "my jquery popup",
+          width: 430,
+          height: 200,
+          modal: true,
+          buttons: {
+            Close:function(){
+              $(this).dialog('close');
+            }
+          }
+        });
+      });
+    })
+
+
+  </script>
+
+</head>
+<body id="home">
+<nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+    <div class="container-fluid px-5">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'infrastructure' %}" class="nav-link">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'admission' %}" class="nav-link">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'teachers' %}" class="nav-link">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'tc_certi' %}" class="nav-link">TC</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!----------admission------>
+
+<div class="container-fluid">
+    <h2 id="adms" style="text-align: center;color: #3;color: #3292a6;border-top: 20px;margin-top: 20px;" class="pt-5"><b>INFRASTRUCTURE</b></h2>
+    <div class="row">
+        <div class="col-lg-8 pt-5">
+            <div class="container-fluid">
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block " onclick="infrafun('building')" style="border-radius:12px;">School Building</button>
+                    <div id="building" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+                            We have around 20 classes(8.66 * 6.32 sq.ft. approx.) and other speciality rooms that includes
+                            Science Lab, Maths Lab, Computer Lab,Activity Room and Library.
+
+                            <ul>
+                                <li class="librar text-justify px-3">
+                                    Electricity back-up is available throughout
+                                    the school hours through heavy generator sets.
+                                </li>
+                                <li class="librar text-justify px-3">
+                                    Hygiene is always considered an important area where by neat
+                                    and clean toilets and good sanitation is always maintained.
+                                </li>
+                                <li class="librar text-justify px-3">
+                                    Surroundings consist of attractive potted flowers,
+                                    shrubs and herbs make the environment look beautiful.
+                                </li>
+                                <li class="librar text-justify px-3">
+                                    The school has proper exit plans to combat disasters like earthquake.
+                                </li>
+                            </ul>
+                        </p>
+                        <div id="carouselExampleControls5" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class0.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class1.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class4.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/class_img/class6.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/class_img/class7.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/class_img/class8.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/class_img/class9.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <button type="button" class="btn  btn-lg btn-block" onclick="infrafun('science')" style="border-radius:12px;">Science Lab</button>
+                    <div id="science" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+                            The Science Lab(17.46 * 6.53 sq.ft)  is well equipped with apparatus and equipments.It is well ventilated and spacious.
+                            Proper safety measures are taken to conduct the various equipments to enhance the student's theoretical knowledge.
+                        </p>
+                        <div id="carouselExampleControls4" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab7.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab4.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab5.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/lab_img/lab8.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/lab_img/lab7.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/lab_img/lab8.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/lab_img/lab1.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block button1" onclick="infrafun('computer')" style="border-radius:12px;">Computer Lab</button>
+                    <div id="computer" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+                            The Computer Lab  is well equipped
+                            with latest software and hardware with P3 duo processor, projection system and Internet connectivity.
+                        </p>
+                        <!-------
+                        <div id="carouselExampleControls" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block button1" onclick="infrafun('maths')" style="border-radius:12px;">Maths Lab</button>
+                    <div id="maths" class="dddd" style=" display:none;" >
+                        <p class="librar text-justify px-3">
+                            Math’s Lab is well equipped with devices that help in the better understanding of the concepts . It helps in the overall development where concepts are cleared to the core.
+                        </p>
+                        <!----
+                        <div id="carouselExampleControls5" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls5" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls5" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        --->
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block button1" onclick="infrafun('library')" style="border-radius:12px;">Library</button>
+                    <div id="library" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+                            The school has a well established library(9.59 X 6.30 sq ft) as an integral part of the school. To inspire the students to acquire additional knowledge and to develop in them,
+                            the passion for reading so that they may learn to go beyond the pages of their text books.
+                            This treasure of  books is very well managed by qualified librarians. It provides a stimulating, user friendly and information rich environment.
+                             It has a vast collection of approx 3000  books.
+                            It has a wide variety of books on art and craft,  travel, drama, poetry, philosophy, competitions.
+                            A wide range of encyclopedia and reference books including maps and charts, for the recreational and curriculum needs of students and as well as teachers.
+                            Teacher Resource Section of the library is regularly upgraded and updated for the teachers. It also has a wide range of regularly updated CBSE and NCERT publications
+                            as well. Library periods are alotted for classes and the students are helped in selecting useful books by their teachers and the librarian.
+                        </p>
+                        <div id="carouselExampleControls2" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-12 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 col-sm-12 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4  col-sm-12 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 " alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 " alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block button1" onclick="infrafun('activity')" style="border-radius:12px;">Activity Room</button>
+                    <div id="activity" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+                            For the activity class, the school has an activity room which is carefully designed for children to work on their art, craft, music, dance,
+                            and other indoor activities. Setting the right kind of environment inside the activity room can unleash the child’s creative energy.
+                        </p>
+                        <!----
+                        <div id="carouselExampleControls3" class="carousel slide carr" data-ride="carousel" >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                        <div class="col-lg-4 px-2 py-2">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib3.jpg' %}" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib1.jpg' %}" class="d-block w-100 infraimage" alt="..." >
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{% static 'img/infra/lib2.jpg' %}" class="d-block w-100" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        --->
+                    </div>
+                </div>
+                <!-----
+                <div class="pt-3">
+                    <button type="button" class="btn btn-lg btn-block button1" onclick="infrafun('staff')" style="border-radius:12px;">Reception/Staff Room</button>
+                    <div id="staff" class="dddd" style=" display:none;">
+                        This is my DIV element.
+                    </div>
+                </div>
+                --->
+                <!----
+                <div class="pt-3">
+                    <button type="button" class="btn  btn-lg btn-block" onclick="infrafun('dimension')" style="border-radius:12px;">School Dimensions</button>
+                    <div id="dimension" class="dddd" style=" display:none;">
+                        <p class="librar text-justify px-3">
+
+                        </p>
+
+                    </div>
+                </div>
+                ---->
+            </div>
+
+        </div>
+        <div class="col-lg-4 py-5" id="addbar">
+            <div id="bordercolor">
+                <h2 style="color:#3292a6;">
+                    <i class="fa fa-map-marker" style="font-size:40px;color:#3292a6"></i>
+                    <b>Address:</b>
+                </h2>
+                <h5>Targuwan Road </h5>
+                <h5>Talbehat</h5>
+                <h4>Dist: Lalitpur</h4>
+                <h5>PIN: 284126</h5>
+            </div>
+            <div id="bordercolor">
+                <h2 style="color:#3292a6;">
+                    <i class="fa fa-phone" style="font-size:40px;color:#3292a6"></i>
+                    <b>Contact Us:</b>
+                </h2>
+                <h5>(+91) 9369381033</h5>
+                <h5>(+91) 8667391462</h5>
+            </div>
+            <div>
+
+                <h2 style="color:#3292a6;"><i class="fa fa-envelope" style="font-size:40px;color:#3292a6"></i><b>    Email:</b></h2>
+                <h5> mlrppublicschool@gmail.com</h5>
+            </div>
+            <h3 class="pt-5" style="color:#3292a6;">Send us a Message</h3>
+            <p class="lead">Let us know your response!</p>
+            <div class="form" >
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for hidden_field in form.hidden_fields %}
+                    {{ hidden_field }}
+                    {% endfor %}
+
+                    {% if form.non_field_errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.non_field_errors %}
+                        {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+
+                        {% if form.is_bound %}
+                        {% if field.errors %}
+                        {% render_field field class="form-control is-invalid" %}
+                        {% for error in field.errors %}
+                        <div class="invalid-feedback">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% render_field field class="form-control is-valid" %}
+                        {% endif %}
+                        {% else %}
+                        {% render_field field class="form-control" %}
+                        {% endif %}
+
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <center>
+
+                        <button type="submit" class="ml-auto mr-auto btn btn-danger">Send</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------- Footer ------------>
+<footer id="footer" class="ct-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 ">
+                <h2 class="ct-footer-list-header"><span style="color:white">Quick Links</span></h2>
+                <ul>
+                    <p>
+                        <a href="{% url 'index' %}"  ><span style="color:white">HOME</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'about' %}"><span style="color:white">About Us</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'admission' %}"><span style="color:white">Admission</span></a>
+                    </p>
+                    <p>
+                        <a href="{% url 'contact' %}"><span style="color:white">Contact Us</span></a>
+                    </p>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+
+
+            </div>
+            <div class="col-lg-4">
+                <h2 class="ct-footer-list-header"><span style="color:white">CONTACT US</span></h2>
+                <ul>
+                    <p>
+                    <address>
+                        <span>LALITPUR ROAD<br></span>TARGUWAN<br>
+                        TALBEHAT, LALITPUR, 284126<br>
+                        <span>Phone: <a href="tel:9369381033">(+91) 9369381033 ,</a></span><br>
+                        <span><a href="tel:9369381033">(+91) 8667391462</a></span>
+                    </address>
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+</footer>
+<script>
+
+</script>
+<script src="{% static 'js/infra.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
