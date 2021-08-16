@@ -69,14 +69,12 @@
 
 </head>
 <body id="home">
-<nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light py-3 " id="navbar1">
     <div class="container-fluid px-5">
-        <a href="{% url 'index' %}" class="navbar-brand">
-            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP </h3>
-        </a>
+
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse navCenter" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
@@ -95,6 +93,7 @@
                 <li class="nav-item">
                     <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
                 </li>
+
                 <li class="nav-item">
                     <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
                 </li>
@@ -110,8 +109,7 @@
             </ul>
         </div>
     </div>
-</nav>
-<!----------admission------>
+</nav><!----------admission------>
 
 <div class="container-fluid">
     <h2 id="adms" style="text-align: center;color: #3;color: #3292a6;border-top: 20px;margin-top: 20px;" class="pt-5"><b>DOCUMENT REQUIRED</b></h2>

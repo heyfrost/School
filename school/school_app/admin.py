@@ -50,3 +50,23 @@ class DisclosureAdmin(admin.ModelAdmin):
 @admin.register(General_Disclosure)
 class General_DisclosureAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Staff_Disclosure)
+class Staff_DisclosureAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(School_Infra_Disclosure)
+class School_Infra_DisclosureAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(MandatoryClassYear)
+class MandatoryClassYearAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(MandatoryClassDetail)
+class MandatoryClassDetailAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(IndexImage)
+class IndexImageAdmin(admin.ModelAdmin):
+    pass

@@ -20,6 +20,12 @@ def content_file_name(instance,filename):
 	filename= str(instance.caption)+"."+str(ext)
 	return os.path.join('images/',filename)
 
+def content_file_name3(instance,filename):
+    ext="png"
+
+    filename= str(instance.caption)+"."+str(ext)
+    return os.path.join('carausel/',filename)
+
 def student_im(instance,filename):
     ext="png"
     filename= str(instance.g_phone1)+"."+str(ext)
@@ -280,3 +286,72 @@ class General_Disclosure(models.Model):
 
     def __str__(self):
         return self.info
+
+
+class Staff_Disclosure(models.Model):
+    info = models.CharField(max_length=100, null=False)
+    detail = models.CharField(max_length=100,null=False)
+
+    def __str__(self):
+        return self.info
+
+class School_Infra_Disclosure(models.Model):
+    info = models.CharField(max_length=100, null=False)
+    detail = models.CharField(max_length=100,null=False)
+
+    def __str__(self):
+        return self.info
+
+
+class MandatoryClassYear(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+
+class MandatoryClassDetail(models.Model):
+    category = models.ForeignKey(
+        MandatoryClassYear, on_delete=models.SET_NULL, null=True, blank=True)
+    clas = models.CharField(max_length=100,null=False)
+    boys = models.CharField(max_length=100,null=False)
+    girls = models.CharField(max_length=100,null=False)
+    total = models.CharField(max_length=100,null=False)
+
+
+
+    def __str__(self):
+        return self.clas
+
+    def get_cname(self):
+        class_name = "MandatoryClassDetail"
+        return class_name
+
+    class Meta:
+        managed = True
+
+        db_table = 'MandatoryClassDetail'
+        verbose_name_plural = 'MandatoryClassDetails'
+
+
+class IndexImage(models.Model):
+    caption = models.CharField(max_length=100,default="cap")
+
+    image = models.ImageField(upload_to=content_file_name3)
+
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    def __str__(self):
+        return self.caption
+
+    def get_cname(self):
+        class_name = "IndexImage"
+        return class_name
+
+    class Meta:
+        managed = True
+        ordering = ['-created_at']
+        db_table = 'IndexImage'
+        verbose_name_plural = 'IndexImages'

@@ -1,3 +1,496 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+  font-family: Montserrat;
+}
+.topaddress{
+    font-family: initial;
+    color: #3292a6;
+    font-weight: revert;
+}
+
+.carimage{
+    height:43vw;
+    width:100%;
+}
+/**
+ * Extend Us
+ * ---------
+ */
+.circle-percent[data-percent="100"] .mask, .circle-percent[data-percent="99"] .mask, .circle-percent[data-percent="98"] .mask, .circle-percent[data-percent="97"] .mask, .circle-percent[data-percent="96"] .mask, .circle-percent[data-percent="95"] .mask, .circle-percent[data-percent="94"] .mask, .circle-percent[data-percent="93"] .mask, .circle-percent[data-percent="92"] .mask, .circle-percent[data-percent="91"] .mask, .circle-percent[data-percent="90"] .mask, .circle-percent[data-percent="89"] .mask, .circle-percent[data-percent="88"] .mask, .circle-percent[data-percent="87"] .mask, .circle-percent[data-percent="86"] .mask, .circle-percent[data-percent="85"] .mask, .circle-percent[data-percent="84"] .mask, .circle-percent[data-percent="83"] .mask, .circle-percent[data-percent="82"] .mask, .circle-percent[data-percent="81"] .mask, .circle-percent[data-percent="80"] .mask, .circle-percent[data-percent="79"] .mask, .circle-percent[data-percent="78"] .mask, .circle-percent[data-percent="77"] .mask, .circle-percent[data-percent="76"] .mask, .circle-percent[data-percent="75"] .mask, .circle-percent[data-percent="74"] .mask, .circle-percent[data-percent="73"] .mask, .circle-percent[data-percent="72"] .mask, .circle-percent[data-percent="71"] .mask, .circle-percent[data-percent="70"] .mask, .circle-percent[data-percent="69"] .mask, .circle-percent[data-percent="68"] .mask, .circle-percent[data-percent="67"] .mask, .circle-percent[data-percent="66"] .mask, .circle-percent[data-percent="65"] .mask, .circle-percent[data-percent="64"] .mask, .circle-percent[data-percent="63"] .mask, .circle-percent[data-percent="62"] .mask, .circle-percent[data-percent="61"] .mask, .circle-percent[data-percent="60"] .mask, .circle-percent[data-percent="59"] .mask, .circle-percent[data-percent="58"] .mask, .circle-percent[data-percent="57"] .mask, .circle-percent[data-percent="56"] .mask, .circle-percent[data-percent="55"] .mask, .circle-percent[data-percent="54"] .mask, .circle-percent[data-percent="53"] .mask, .circle-percent[data-percent="52"] .mask, .circle-percent[data-percent="51"] .mask {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.circle-percent[data-percent="100"] .fill, .circle-percent[data-percent="99"] .fill, .circle-percent[data-percent="98"] .fill, .circle-percent[data-percent="97"] .fill, .circle-percent[data-percent="96"] .fill, .circle-percent[data-percent="95"] .fill, .circle-percent[data-percent="94"] .fill, .circle-percent[data-percent="93"] .fill, .circle-percent[data-percent="92"] .fill, .circle-percent[data-percent="91"] .fill, .circle-percent[data-percent="90"] .fill, .circle-percent[data-percent="89"] .fill, .circle-percent[data-percent="88"] .fill, .circle-percent[data-percent="87"] .fill, .circle-percent[data-percent="86"] .fill, .circle-percent[data-percent="85"] .fill, .circle-percent[data-percent="84"] .fill, .circle-percent[data-percent="83"] .fill, .circle-percent[data-percent="82"] .fill, .circle-percent[data-percent="81"] .fill, .circle-percent[data-percent="80"] .fill, .circle-percent[data-percent="79"] .fill, .circle-percent[data-percent="78"] .fill, .circle-percent[data-percent="77"] .fill, .circle-percent[data-percent="76"] .fill, .circle-percent[data-percent="75"] .fill, .circle-percent[data-percent="74"] .fill, .circle-percent[data-percent="73"] .fill, .circle-percent[data-percent="72"] .fill, .circle-percent[data-percent="71"] .fill, .circle-percent[data-percent="70"] .fill, .circle-percent[data-percent="69"] .fill, .circle-percent[data-percent="68"] .fill, .circle-percent[data-percent="67"] .fill, .circle-percent[data-percent="66"] .fill, .circle-percent[data-percent="65"] .fill, .circle-percent[data-percent="64"] .fill, .circle-percent[data-percent="63"] .fill, .circle-percent[data-percent="62"] .fill, .circle-percent[data-percent="61"] .fill, .circle-percent[data-percent="60"] .fill, .circle-percent[data-percent="59"] .fill, .circle-percent[data-percent="58"] .fill, .circle-percent[data-percent="57"] .fill, .circle-percent[data-percent="56"] .fill, .circle-percent[data-percent="55"] .fill, .circle-percent[data-percent="54"] .fill, .circle-percent[data-percent="53"] .fill, .circle-percent[data-percent="52"] .fill, .circle-percent[data-percent="51"] .fill, .circle-percent .bar {
+  position: absolute;
+  border: 0.14em solid #5dc3be;
+  width: 0.72em;
+  height: 0.72em;
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.circle-percent[data-percent="100"] .fill, .circle-percent[data-percent="100"] .bar:after, .circle-percent[data-percent="99"] .fill, .circle-percent[data-percent="99"] .bar:after, .circle-percent[data-percent="98"] .fill, .circle-percent[data-percent="98"] .bar:after, .circle-percent[data-percent="97"] .fill, .circle-percent[data-percent="97"] .bar:after, .circle-percent[data-percent="96"] .fill, .circle-percent[data-percent="96"] .bar:after, .circle-percent[data-percent="95"] .fill, .circle-percent[data-percent="95"] .bar:after, .circle-percent[data-percent="94"] .fill, .circle-percent[data-percent="94"] .bar:after, .circle-percent[data-percent="93"] .fill, .circle-percent[data-percent="93"] .bar:after, .circle-percent[data-percent="92"] .fill, .circle-percent[data-percent="92"] .bar:after, .circle-percent[data-percent="91"] .fill, .circle-percent[data-percent="91"] .bar:after, .circle-percent[data-percent="90"] .fill, .circle-percent[data-percent="90"] .bar:after, .circle-percent[data-percent="89"] .fill, .circle-percent[data-percent="89"] .bar:after, .circle-percent[data-percent="88"] .fill, .circle-percent[data-percent="88"] .bar:after, .circle-percent[data-percent="87"] .fill, .circle-percent[data-percent="87"] .bar:after, .circle-percent[data-percent="86"] .fill, .circle-percent[data-percent="86"] .bar:after, .circle-percent[data-percent="85"] .fill, .circle-percent[data-percent="85"] .bar:after, .circle-percent[data-percent="84"] .fill, .circle-percent[data-percent="84"] .bar:after, .circle-percent[data-percent="83"] .fill, .circle-percent[data-percent="83"] .bar:after, .circle-percent[data-percent="82"] .fill, .circle-percent[data-percent="82"] .bar:after, .circle-percent[data-percent="81"] .fill, .circle-percent[data-percent="81"] .bar:after, .circle-percent[data-percent="80"] .fill, .circle-percent[data-percent="80"] .bar:after, .circle-percent[data-percent="79"] .fill, .circle-percent[data-percent="79"] .bar:after, .circle-percent[data-percent="78"] .fill, .circle-percent[data-percent="78"] .bar:after, .circle-percent[data-percent="77"] .fill, .circle-percent[data-percent="77"] .bar:after, .circle-percent[data-percent="76"] .fill, .circle-percent[data-percent="76"] .bar:after, .circle-percent[data-percent="75"] .fill, .circle-percent[data-percent="75"] .bar:after, .circle-percent[data-percent="74"] .fill, .circle-percent[data-percent="74"] .bar:after, .circle-percent[data-percent="73"] .fill, .circle-percent[data-percent="73"] .bar:after, .circle-percent[data-percent="72"] .fill, .circle-percent[data-percent="72"] .bar:after, .circle-percent[data-percent="71"] .fill, .circle-percent[data-percent="71"] .bar:after, .circle-percent[data-percent="70"] .fill, .circle-percent[data-percent="70"] .bar:after, .circle-percent[data-percent="69"] .fill, .circle-percent[data-percent="69"] .bar:after, .circle-percent[data-percent="68"] .fill, .circle-percent[data-percent="68"] .bar:after, .circle-percent[data-percent="67"] .fill, .circle-percent[data-percent="67"] .bar:after, .circle-percent[data-percent="66"] .fill, .circle-percent[data-percent="66"] .bar:after, .circle-percent[data-percent="65"] .fill, .circle-percent[data-percent="65"] .bar:after, .circle-percent[data-percent="64"] .fill, .circle-percent[data-percent="64"] .bar:after, .circle-percent[data-percent="63"] .fill, .circle-percent[data-percent="63"] .bar:after, .circle-percent[data-percent="62"] .fill, .circle-percent[data-percent="62"] .bar:after, .circle-percent[data-percent="61"] .fill, .circle-percent[data-percent="61"] .bar:after, .circle-percent[data-percent="60"] .fill, .circle-percent[data-percent="60"] .bar:after, .circle-percent[data-percent="59"] .fill, .circle-percent[data-percent="59"] .bar:after, .circle-percent[data-percent="58"] .fill, .circle-percent[data-percent="58"] .bar:after, .circle-percent[data-percent="57"] .fill, .circle-percent[data-percent="57"] .bar:after, .circle-percent[data-percent="56"] .fill, .circle-percent[data-percent="56"] .bar:after, .circle-percent[data-percent="55"] .fill, .circle-percent[data-percent="55"] .bar:after, .circle-percent[data-percent="54"] .fill, .circle-percent[data-percent="54"] .bar:after, .circle-percent[data-percent="53"] .fill, .circle-percent[data-percent="53"] .bar:after, .circle-percent[data-percent="52"] .fill, .circle-percent[data-percent="52"] .bar:after, .circle-percent[data-percent="51"] .fill, .circle-percent[data-percent="51"] .bar:after {
+  transform: rotate(180deg);
+}
+
+.circle-percent {
+  position: relative;
+  font-size: 200px;
+  font-weight: bold;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #4a4e4b;
+  margin: 0 auto;
+}
+.circle-percent *,
+.circle-percent *::before,
+.circle-percent *::after {
+  box-sizing: content-box;
+}
+.circle-percent > span {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 5em;
+  font-size: 0.2em;
+  color: #4a4e4b;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.25s ease-in;
+}
+.circle-percent > span sup {
+  vertical-align: baseline;
+  font-size: 0.5em;
+  position: relative;
+  top: -0.75em;
+  font-weight: normal;
+}
+.circle-percent::after {
+  position: absolute;
+  top: 0.14em;
+  left: 0.14em;
+  display: block;
+  content: " ";
+  border-radius: 50%;
+  background-color: #fff;
+  width: 0.72em;
+  height: 0.72em;
+  transition: all 0.25s ease-in;
+}
+.circle-percent .mask {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  clip: rect(0em, 1em, 1em, 0.5em);
+}
+.circle-percent[data-percent="1"] .bar {
+  transform: rotate(3.6deg);
+}
+.circle-percent[data-percent="2"] .bar {
+  transform: rotate(7.2deg);
+}
+.circle-percent[data-percent="3"] .bar {
+  transform: rotate(10.8deg);
+}
+.circle-percent[data-percent="4"] .bar {
+  transform: rotate(14.4deg);
+}
+.circle-percent[data-percent="5"] .bar {
+  transform: rotate(18deg);
+}
+.circle-percent[data-percent="6"] .bar {
+  transform: rotate(21.6deg);
+}
+.circle-percent[data-percent="7"] .bar {
+  transform: rotate(25.2deg);
+}
+.circle-percent[data-percent="8"] .bar {
+  transform: rotate(28.8deg);
+}
+.circle-percent[data-percent="9"] .bar {
+  transform: rotate(32.4deg);
+}
+.circle-percent[data-percent="10"] .bar {
+  transform: rotate(36deg);
+}
+.circle-percent[data-percent="11"] .bar {
+  transform: rotate(39.6deg);
+}
+.circle-percent[data-percent="12"] .bar {
+  transform: rotate(43.2deg);
+}
+.circle-percent[data-percent="13"] .bar {
+  transform: rotate(46.8deg);
+}
+.circle-percent[data-percent="14"] .bar {
+  transform: rotate(50.4deg);
+}
+.circle-percent[data-percent="15"] .bar {
+  transform: rotate(54deg);
+}
+.circle-percent[data-percent="16"] .bar {
+  transform: rotate(57.6deg);
+}
+.circle-percent[data-percent="17"] .bar {
+  transform: rotate(61.2deg);
+}
+.circle-percent[data-percent="18"] .bar {
+  transform: rotate(64.8deg);
+}
+.circle-percent[data-percent="19"] .bar {
+  transform: rotate(68.4deg);
+}
+.circle-percent[data-percent="20"] .bar {
+  transform: rotate(72deg);
+}
+.circle-percent[data-percent="21"] .bar {
+  transform: rotate(75.6deg);
+}
+.circle-percent[data-percent="22"] .bar {
+  transform: rotate(79.2deg);
+}
+.circle-percent[data-percent="23"] .bar {
+  transform: rotate(82.8deg);
+}
+.circle-percent[data-percent="24"] .bar {
+  transform: rotate(86.4deg);
+}
+.circle-percent[data-percent="25"] .bar {
+  transform: rotate(90deg);
+}
+.circle-percent[data-percent="26"] .bar {
+  transform: rotate(93.6deg);
+}
+.circle-percent[data-percent="27"] .bar {
+  transform: rotate(97.2deg);
+}
+.circle-percent[data-percent="28"] .bar {
+  transform: rotate(100.8deg);
+}
+.circle-percent[data-percent="29"] .bar {
+  transform: rotate(104.4deg);
+}
+.circle-percent[data-percent="30"] .bar {
+  transform: rotate(108deg);
+}
+.circle-percent[data-percent="31"] .bar {
+  transform: rotate(111.6deg);
+}
+.circle-percent[data-percent="32"] .bar {
+  transform: rotate(115.2deg);
+}
+.circle-percent[data-percent="33"] .bar {
+  transform: rotate(118.8deg);
+}
+.circle-percent[data-percent="34"] .bar {
+  transform: rotate(122.4deg);
+}
+.circle-percent[data-percent="35"] .bar {
+  transform: rotate(126deg);
+}
+.circle-percent[data-percent="36"] .bar {
+  transform: rotate(129.6deg);
+}
+.circle-percent[data-percent="37"] .bar {
+  transform: rotate(133.2deg);
+}
+.circle-percent[data-percent="38"] .bar {
+  transform: rotate(136.8deg);
+}
+.circle-percent[data-percent="39"] .bar {
+  transform: rotate(140.4deg);
+}
+.circle-percent[data-percent="40"] .bar {
+  transform: rotate(144deg);
+}
+.circle-percent[data-percent="41"] .bar {
+  transform: rotate(147.6deg);
+}
+.circle-percent[data-percent="42"] .bar {
+  transform: rotate(151.2deg);
+}
+.circle-percent[data-percent="43"] .bar {
+  transform: rotate(154.8deg);
+}
+.circle-percent[data-percent="44"] .bar {
+  transform: rotate(158.4deg);
+}
+.circle-percent[data-percent="45"] .bar {
+  transform: rotate(162deg);
+}
+.circle-percent[data-percent="46"] .bar {
+  transform: rotate(165.6deg);
+}
+.circle-percent[data-percent="47"] .bar {
+  transform: rotate(169.2deg);
+}
+.circle-percent[data-percent="48"] .bar {
+  transform: rotate(172.8deg);
+}
+.circle-percent[data-percent="49"] .bar {
+  transform: rotate(176.4deg);
+}
+.circle-percent[data-percent="50"] .bar {
+  transform: rotate(180deg);
+}
+.circle-percent[data-percent="51"] .bar {
+  transform: rotate(183.6deg);
+}
+.circle-percent[data-percent="52"] .bar {
+  transform: rotate(187.2deg);
+}
+.circle-percent[data-percent="53"] .bar {
+  transform: rotate(190.8deg);
+}
+.circle-percent[data-percent="54"] .bar {
+  transform: rotate(194.4deg);
+}
+.circle-percent[data-percent="55"] .bar {
+  transform: rotate(198deg);
+}
+.circle-percent[data-percent="56"] .bar {
+  transform: rotate(201.6deg);
+}
+.circle-percent[data-percent="57"] .bar {
+  transform: rotate(205.2deg);
+}
+.circle-percent[data-percent="58"] .bar {
+  transform: rotate(208.8deg);
+}
+.circle-percent[data-percent="59"] .bar {
+  transform: rotate(212.4deg);
+}
+.circle-percent[data-percent="60"] .bar {
+  transform: rotate(216deg);
+}
+.circle-percent[data-percent="61"] .bar {
+  transform: rotate(219.6deg);
+}
+.circle-percent[data-percent="62"] .bar {
+  transform: rotate(223.2deg);
+}
+.circle-percent[data-percent="63"] .bar {
+  transform: rotate(226.8deg);
+}
+.circle-percent[data-percent="64"] .bar {
+  transform: rotate(230.4deg);
+}
+.circle-percent[data-percent="65"] .bar {
+  transform: rotate(234deg);
+}
+.circle-percent[data-percent="66"] .bar {
+  transform: rotate(237.6deg);
+}
+.circle-percent[data-percent="67"] .bar {
+  transform: rotate(241.2deg);
+}
+.circle-percent[data-percent="68"] .bar {
+  transform: rotate(244.8deg);
+}
+.circle-percent[data-percent="69"] .bar {
+  transform: rotate(248.4deg);
+}
+.circle-percent[data-percent="70"] .bar {
+  transform: rotate(252deg);
+}
+.circle-percent[data-percent="71"] .bar {
+  transform: rotate(255.6deg);
+}
+.circle-percent[data-percent="72"] .bar {
+  transform: rotate(259.2deg);
+}
+.circle-percent[data-percent="73"] .bar {
+  transform: rotate(262.8deg);
+}
+.circle-percent[data-percent="74"] .bar {
+  transform: rotate(266.4deg);
+}
+.circle-percent[data-percent="75"] .bar {
+  transform: rotate(270deg);
+}
+.circle-percent[data-percent="76"] .bar {
+  transform: rotate(273.6deg);
+}
+.circle-percent[data-percent="77"] .bar {
+  transform: rotate(277.2deg);
+}
+.circle-percent[data-percent="78"] .bar {
+  transform: rotate(280.8deg);
+}
+.circle-percent[data-percent="79"] .bar {
+  transform: rotate(284.4deg);
+}
+.circle-percent[data-percent="80"] .bar {
+  transform: rotate(288deg);
+}
+.circle-percent[data-percent="81"] .bar {
+  transform: rotate(291.6deg);
+}
+.circle-percent[data-percent="82"] .bar {
+  transform: rotate(295.2deg);
+}
+.circle-percent[data-percent="83"] .bar {
+  transform: rotate(298.8deg);
+}
+.circle-percent[data-percent="84"] .bar {
+  transform: rotate(302.4deg);
+}
+.circle-percent[data-percent="85"] .bar {
+  transform: rotate(306deg);
+}
+.circle-percent[data-percent="86"] .bar {
+  transform: rotate(309.6deg);
+}
+.circle-percent[data-percent="87"] .bar {
+  transform: rotate(313.2deg);
+}
+.circle-percent[data-percent="88"] .bar {
+  transform: rotate(316.8deg);
+}
+.circle-percent[data-percent="89"] .bar {
+  transform: rotate(320.4deg);
+}
+.circle-percent[data-percent="90"] .bar {
+  transform: rotate(324deg);
+}
+.circle-percent[data-percent="91"] .bar {
+  transform: rotate(327.6deg);
+}
+.circle-percent[data-percent="92"] .bar {
+  transform: rotate(331.2deg);
+}
+.circle-percent[data-percent="93"] .bar {
+  transform: rotate(334.8deg);
+}
+.circle-percent[data-percent="94"] .bar {
+  transform: rotate(338.4deg);
+}
+.circle-percent[data-percent="95"] .bar {
+  transform: rotate(342deg);
+}
+.circle-percent[data-percent="96"] .bar {
+  transform: rotate(345.6deg);
+}
+.circle-percent[data-percent="97"] .bar {
+  transform: rotate(349.2deg);
+}
+.circle-percent[data-percent="98"] .bar {
+  transform: rotate(352.8deg);
+}
+.circle-percent[data-percent="99"] .bar {
+  transform: rotate(356.4deg);
+}
+.circle-percent[data-percent="100"] .bar {
+  transform: rotate(360deg);
+}
+.circle-percent:hover {
+  cursor: default;
+}
+.circle-percent:hover > span {
+  width: 3.33em;
+  line-height: 3.33em;
+  font-size: 0.3em;
+  color: #5dc3be;
+}
+.circle-percent:hover:after {
+  top: 0.1em;
+  left: 0.1em;
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.drivers-insured {
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
+
+  padding: 2rem;
+}
+.drivers-insured header {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.drivers-insured header span {
+  color: #FEB200;
+}
+
+
+/*%age circle */
+.topcenter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.circle{
+    background-color: whitesmoke;
+}
+#circle-test{
+font-size: 2.75rem;
+text-align: center;
+}
+.single-chart {
+color: #7c6060;
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
 /*main carausel*/
 .carousel-wrap {
   margin: 90px auto;
@@ -76,10 +569,11 @@ border-radius: 12px;
     margin-top: 3rem;
 }
 .topheading {
-    font-size: 45px;
+    font-size: 60px;
     font-family: initial;
     color: #3292a6;
     font-weight: revert;
+
 }
 .topimage{
     display: block;
@@ -87,8 +581,14 @@ border-radius: 12px;
     margin-right: auto;
     width: 50%;
 }
+.navCenter{
+    justify-content: center;
+}
 .mar{
+text-align: center;
+padding: 5px 0;
 
+text-align: center;
 }
 .theadin{
     margin-top: 30px;
@@ -124,7 +624,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  margin-top: 105px; }
+ }
 
 #home1 {
     margin-top:0px;

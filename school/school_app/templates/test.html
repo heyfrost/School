@@ -9,9 +9,10 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MLRP School</title>
-    <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
-    <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+    <title>MLRP Public School</title>
+    <link rel = "shortcut icon" href ="{% static 'img/logo.jpg' %}" type="image/gif">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href={% static "css/style.css" %}>
     <script src="{% static "js/jquery.js" %}"></script>
     <script src="{% static "js/rango-jquery.js" %}"></script>
@@ -41,7 +42,7 @@
     <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href={% static "css/style.css" %} rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
     <!-- Include jQuery -->
     <script src="{% static 'http://code.jquery.com/jquery-1.8.2.min.js' %}"></script>
@@ -68,16 +69,31 @@
   </script>
 
 </head>
-<body id="home">
+<body id="home1">
 
-<nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
-    <div class="container">
-        <a href="{% url 'index' %}" class="navbar-brand">
-            <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
-        </a>
+<div class="container-fluid py-2 px-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12   pt-5">
+            <div class="" style="display: block;margin-left: auto;margin-right: auto;">
+                <a href="{% url 'index' %}" class="navbar-brand">
+                    <img src="{% static 'img/logo.jpg' %}" width="50%" height="50%" alt="" class="topimage">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-12 col-xs-12 col-sm-12  mar" >
+            <div class="container-fluid theadin d-flex justify-content-center">
+                <h1 class="topheading text-justify">MLRP Public School</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light py-3 " id="navbar1">
+    <div class="container-fluid px-5">
+
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse navCenter" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
@@ -96,6 +112,10 @@
                 <li class="nav-item">
                     <a href="{% url 'fee_structure' %}" class="nav-link">Fee Structure</a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'mandatory_disclosure' %}" class="nav-link">Mandatory Disclosure</a>
+                </li>
                 <li class="nav-item">
                     <a href="{% url 'tc_certi' %}" class="nav-link">TC</a>
                 </li>
@@ -110,299 +130,224 @@
     </div>
 </nav>
 
+<div class="content12">
+    <!--SHOWCASE-->
+    <section>
+        <div class="primary-overlay text-white py-3">
+            <img src="../static/img/schl1.jpg" alt="mlrpschool" class="img-fluid no-repeat" width="100%" height="auto">
+        </div1
+    </section>
 
-<form  method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ aform.non_field_errors }}
-    <div class="container py-5">
-        <h3 class="student_detail">Student Detail</h3><br>
-        <div class="row py-3">
-            <div class="col-lg-6 col-sm-12">
-                <div class="fieldWrapper">
-                    {{ aform.name.errors }}
-                    <label for="{{ aform.name.id_for_label }}">Name*: </label>
-                    {{ aform.name }}
-                </div>
+
+    <section id="notice" class="py-5 text-center bg-light">
+        <div class="container">
+            <div class="info-header">
+                <h1 class="" style="color:#3292a6;">
+                    NOTICE
+                </h1>
             </div>
-            <div class="col-lg-6 col-sm-12">
-                <div class="fieldWrapper">
-                    {{ aform.dob.errors }}
-                    <label for="{{ aform.dob.id_for_label }}">Date of birth*: </label>
-                    {{ aform.dob }}
+        </div>
+    </section>
+
+
+    <!--sdfsdfdsf-->
+
+
+
+    <section id="boxes" class="py-3">
+        <div class="container">
+            <div class="row">
+                {% for notice in notices %}
+                <div class="col md-3">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h3 class="" style="color:#3292a6;"><a href="{{ notice.file.url }}" target="_blank">{{ notice.title }}</a></h3>
+                            <p class="text-muted">{{ notice.content }}</p>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.gender.errors }}
-                            <label for="{{ aform.gender.id_for_label }}">Gender*: </label>
-                            {{ aform.gender }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.religion.errors }}
-                            <label for="{{ aform.religion.id_for_label }}">Religion*: </label>
-                            {{ aform.religion }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.blood.errors }}
-                            <label for="{{ aform.blood.id_for_label }}">Blood Type*: </label>
-                            {{ aform.blood }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.caste.errors }}
-                            <label for="{{ aform.caste.id_for_label }}">Caste*: </label>
-                            {{ aform.caste }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.student_image.errors }}
-                            <label for="{{ aform.student_image.id_for_label }}"> Student Image*: </label>
-                            {{ aform.student_image }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
+        </div>
+    </section>
 
-                <h3 class="student_detail">Father's Detail</h3>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.f_name.errors }}
-                            <label for="{{ aform.f_name.id_for_label }}">Name*: </label>
-                            {{ aform.f_name }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.f_phone.errors }}
-                            <label for="{{ aform.f_phone.id_for_label }}">Phone Number*: </label>
-                            {{ aform.f_phone }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.f_profession.errors }}
-                            <label for="{{ aform.f_profession.id_for_label }}">Profession*: </label>
-                            {{ aform.f_profession }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.f_email.errors }}
-                            <label for="{{ aform.f_email.id_for_label }}">Email: </label>
-                            {{ aform.f_email }}
-                        </div>
-                    </div>
-                </div>
+    <!--ABOUT-->
 
-
-                <h3 class="student_detail">Mother's Detail</h3>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.m_name.errors }}
-                            <label for="{{ aform.m_name.id_for_label }}">Name*: </label>
-                            {{ aform.m_name }}
-                        </div>
+    <section id="message" class="py-5 text-center bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-header mb-5">
+                        <h1 class="pb-3" style="color:#3292a6;">
+                            WHY OUR SCHOOL ?
+                        </h1>
+                        <p class="lead pb-3 text-justify">
+                            Best for Least! That is our policy at MLRP Public School, Talbehat.
+                            We strive to provide our students with state of the art education at minimal fees!
+                        </p>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.m_phone.errors }}
-                            <label for="{{ aform.m_phone.id_for_label }}">Phone Number*: </label>
-                            {{ aform.m_phone }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.m_profession.errors }}
-                            <label for="{{ aform.m_profession.id_for_label }}">Profession*: </label>
-                            {{ aform.m_profession }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.m_email.errors }}
-                            <label for="{{ aform.m_email.id_for_label }}">Email: </label>
-                            {{ aform.m_email }}
-                        </div>
-                    </div>
-                </div>
 
 
 
 
-                <h3 class="student_detail">Guardian Detail</h3>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_name.errors }}
-                            <label for="{{ aform.g_name.id_for_label }}">Name*: </label>
-                            {{ aform.g_name }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_phone1.errors }}
-                            <label for="{{ aform.g_phone1.id_for_label }}">Phone Number*: </label>
-                            {{ aform.g_phone1 }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
+                    <!--accordian-->
 
+                    <div id="accordion" role="tablist"></div>
+                    <div class="card">
+                        <div class="card-header" id="heading1">
+                            <h5 class="mb-0">
+                                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="fa fa-arrow-circle-down"> </i> FOUNDER'S MESSAGE...
+                                </div>
+                            </h5>
+                        </div>
+
+                        <div id="colllapse1" class="collapse show text-justify">
+                            <div class="card-body ">The term 'education' encompasses more than just knowledge and knowing.
+                                It is a harmonious blend of academia, arts, sports, emotions, attitudes, creativity, nature and life itself!
+                                And in the world we have built today, the one who is adept in all these areas is the one who succeeds.
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_phone2.errors }}
-                            <label for="{{ aform.g_phone2.id_for_label }}">Phone Number*: </label>
-                            {{ aform.g_phone2 }}
+
+                    <div class="card">
+                        <div class="card-header" id="heading2">
+                            <h5 class="mb-0">
+                                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                                    <i class="fa fa-arrow-circle-down"> </i> PRINCIPLE'S MESSAGE
+                                </div>
+                            </h5>
+                        </div>
+
+                        <div id="colllapse2" class="collapse show text-justify">
+                            <div class="card-body ">As I walk down the hallways of the school every day, I can hear the chatter of eager minds,
+                                the shouts of excitement from the victorious athletes, the thump of dancer’s feet & the sound of melodious voices harmonizing.
+                                The perpetual energy, movement & enthusiasm permeate the atmosphere at VPS. We are school with a difference.
+                                We value individualism, creativity and innovation and strive to nurture them in our students.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-           <div class="container">
-               <div class="row py-3">
-                   <div class="col-lg-6 col-sm-12">
-                       <div class="fieldWrapper">
-                           {{ aform.g_profession.errors }}
-                           <label for="{{ aform.g_profession.id_for_label }}">Professsion*: </label>
-                           {{ aform.g_profession }}
-                       </div>
-                   </div>
-                   <div class="col-lg-6 col-sm-12">
-                       <div class="fieldWrapper">
-                           {{ aform.g_email.errors }}
-                           <label for="{{ aform.g_email.id_for_label }}">Email: </label>
-                           {{ aform.g_email }}
-                       </div>
-                   </div>
-               </div>
-           </div>
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_rel_with_guardion.errors }}
-                            <label for="{{ aform.g_rel_with_guardion.id_for_label }}">Relation with Guardian*: </label>
-                            {{ aform.g_rel_with_guardion }}
-                        </div>
+        </div>
+    </section>
+
+    <!--about-->
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Send us a Message</h3>
+                    <p class="lead">Let us know your response!</p>
+                    <div class="form" >
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% for hidden_field in form.hidden_fields %}
+                            {{ hidden_field }}
+                            {% endfor %}
+
+                            {% if form.non_field_errors %}
+                            <div class="alert alert-danger" role="alert">
+                                {% for error in form.non_field_errors %}
+                                {{ error }}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            {% for field in form.visible_fields %}
+                            <div class="form-group">
+                                {{ field.label_tag }}
+
+                                {% if form.is_bound %}
+                                {% if field.errors %}
+                                {% render_field field class="form-control is-invalid" %}
+                                {% for error in field.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                {% render_field field class="form-control is-valid" %}
+                                {% endif %}
+                                {% else %}
+                                {% render_field field class="form-control" %}
+                                {% endif %}
+
+                                {% if field.help_text %}
+                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                            <center>
+
+                                <button type="submit" class="ml-auto mr-auto btn btn-danger">Send</button>
+                            </center>
+                        </form>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_religion.errors }}
-                            <label for="{{ aform.g_religion.id_for_label }}">Religion*: </label>
-                            {{ aform.g_religion }}
+                </div>
+                <div class="col-lg-4 align-self-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Reach Us At </h3>
+                            <h2>Phone : </h2>
+                            <h5 class="text-muted"> 9369381033</h5>
+                            <h5 class="text-muted"> 8667391462</h5>
+                            <h2>Email : </h2>
+                            <h5 class="text-muted">mlrppublicschool@gmail.com</h5>
+                            <div class="d-flex flex-row justify-content-center">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_caddress.errors }}
-                            <label for="{{ aform.g_caddress.id_for_label }}">Current Address*: </label>
-                            <br>
-                            {{ aform.g_caddress }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.g_paddress.errors }}
-                            <label for="{{ aform.g_paddress.id_for_label }}">Permanent Address*: </label>
-                            <br>
-                            {{ aform.g_paddress }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <h3 class="student_detail">Contact Details</h3>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.c_phone.errors }}
-                            <label for="{{ aform.c_phone.id_for_label }}">Contact Phone Number*: </label>
-                            {{ aform.c_phone }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.c_email.errors }}
-                            <label for="{{ aform.c_email.id_for_label }}">Contact Email: </label>
-                            {{ aform.c_email }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.c_address.errors }}
-                            <label for="{{ aform.c_address.id_for_label }}">Contact address*: </label> <br>
-                            {{ aform.c_address }}
-                        </div>
 
 
+            </div>
+
+        </div>
+</div>
+</div>
+</section>
+<section style="background:whitesmoke">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="drivers-insured" >
+                <header>Percent of <span>Satisfaction</span> Drivers Insured</header>
+                <div class="circle-percent" data-percent="100">
+                    <span>100<sup>%</sup></span>
+                    <div class="mask">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <h3 class="student_detail">Academic Details</h3>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.acad_class.errors }}
-                            <label for="{{ aform.acad_class.id_for_label }}">Academic Class*: </label>
-                            {{ aform.acad_class }}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.acad_prev_class.errors }}
-                            <label for="{{ aform.acad_prev_class.id_for_label }}">Previous Class*: </label>
-                            {{ aform.acad_prev_class }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-3">
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="fieldWrapper">
-                            {{ aform.aad_prev_school.errors }}
-                            <label for="{{ aform.aad_prev_school.id_for_label }}">Previous School*: </label>
-                            {{ aform.aad_prev_school }}
-                        </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="drivers-insured" >
+                <header>Percent of <span>California</span> Drivers Insured</header>
+                <div class="circle-percent" data-percent="100">
+                    <span>100<sup>%</sup></span>
+                    <div class="mask">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
                     </div>
                 </div>
             </div>
-            <input type="submit" class="btn" value="Submit" style="background-color: #478f60;color:white; border-radius: 15px 50px;  " ></input>
+        </div>
+        <div class="col-lg-4">
+            <div class="drivers-insured" >
+                <header>Percent of <span>California</span> Drivers Insured</header>
+                <div class="circle-percent" data-percent="100">
+                    <span>100<sup>%</sup></span>
+                    <div class="mask">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-</form>
-
-
+</section>
 
 <!----------- Footer ------------>
 <footer id="footer" class="ct-footer">
@@ -447,8 +392,66 @@
 
 </footer>
 
+</div>
+
+
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar1");
+    var sticky = navbar1.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        navbar1.classList.add("sticky")
+        } else {
+            navbar1.classList.remove("sticky");
+        }
+    }
+</script>
+<script>
+    $('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa fa-caret-left'></i>",
+    "<i class='fa fa-caret-right'></i>"
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
+$(document).ready(function() {
+
+	var resizeText = function () {
+		// Standard height, for which the body font size is correct
+		var preferredFontSize = 180; // %
+		var preferredSize = 1024 * 768;
+
+		var currentSize = $(window).width() * $(window).height();
+		var scalePercentage = Math.sqrt(currentSize) / Math.sqrt(preferredSize);
+		var newFontSize = preferredFontSize * scalePercentage;
+		$("body").css("font-size", newFontSize + '%');
+	};
+
+	$(window).bind('resize', function() {
+		resizeText();
+	}).trigger('resize');
+
+});
+</script>
 </body>
 </html>

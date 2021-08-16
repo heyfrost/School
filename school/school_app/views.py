@@ -9,13 +9,15 @@ def index(request):
     faculties=Faculties.objects.all()
     notices=Notices.objects.all()
     form = Messageform(request.POST or None)
+    images = IndexImage.objects.all()
+
     if request.method == 'POST':
         if form.is_valid():
             form.save()
             return redirect('index')
         else:
             return HttpResponse("Invalid Credentials")
-    args = {'notices': notices, 'faculties': faculties, 'form':form}
+    args = {'notices': notices, 'faculties': faculties, 'form':form,'imag':images}
     return render(request, 'index.html', args)
 
 def admission(request):
@@ -136,6 +138,32 @@ def mandatory_disclosure(request):
     for cat in category:
         item=Disclosure.objects.filter(category=cat)
         dict.append((cat,item))
+
+    classyear = MandatoryClassYear.objects.all()
+    dict1=[]
+    for cat in classyear:
+        item=MandatoryClassDetail.objects.filter(category=cat)
+        dict1.append((cat,item))
+
+    # for item,s in dict:
+    #     print(item)
+    #     print(s[0])
     generalDis = General_Disclosure.objects.all()
-    args = {'dict':dict,'gd':generalDis}
+    staff_info = Staff_Disclosure.objects.all()
+    school_infra = School_Infra_Disclosure.objects.all()
+    args = {'dict1':dict1, 'dict':dict,'gd':generalDis,'staff':staff_info,'school_infra':school_infra}
     return render(request,'mandatory_disclosure.html',args)
+
+
+def test_view(request):
+    faculties=Faculties.objects.all()
+    notices=Notices.objects.all()
+    form = Messageform(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+        else:
+            return HttpResponse("Invalid Credentials")
+    args = {'notices': notices, 'faculties': faculties, 'form':form}
+    return render(request, 'test.html', args)
